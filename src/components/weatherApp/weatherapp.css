@@ -1,0 +1,162 @@
+body{
+    background-color: linear-gradient(to right, #240b36, #c31432);
+    background: #240b36;
+    
+}
+
+
+
+/* Container styling */
+.container {
+    width: 505px;
+    height: 650px;
+    margin: auto;
+    margin-top: 75px;
+    border-radius: 24px;
+    background-color: #c31432;
+    padding: 20px;
+    /* Padding to ensure content is not touching edges */
+    box-sizing: border-box;
+}
+
+/* Top bar styling */
+.top-bar {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding-top: 20px;
+    /* Adjusted padding for better alignment */
+}
+
+/* Input styling */
+.top-bar input {
+    width: 362px;
+    height: 60px;
+    /* Adjusted height */
+    background-color: #ebfffc;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding-left: 20px;
+    /* Adjusted padding */
+    color: #626262;
+    font-size: 18px;
+    /* Slightly smaller font size */
+    font-weight: 400;
+}
+
+/* Search icon styling */
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    /* Adjusted width */
+    height: 60px;
+    /* Adjusted height */
+    background-color: #ebfffc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.search-icon:hover{
+    background: #240b36;
+}
+
+.search-icon img {
+    width: 30px;
+    /* Set specific width */
+    height: 30px;
+    /* Set specific height */
+}
+
+/* Weather image styling */
+.weather-image {
+    margin-top: 20px;
+    /* Reduced margin for better spacing */
+    display: flex;
+    justify-content: center;
+}
+
+.weather-image img {
+    width: 150px;
+    /* Set width for weather icon */
+    height: 150px;
+    /* Set height for weather icon */
+    object-fit: contain;
+    /* Ensure the image maintains its aspect ratio */
+}
+
+/* Weather temperature and location styling */
+.weather-temp {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 100px;
+    /* Adjusted font size */
+    font-weight: 400;
+    margin-top: 10px;
+    /* Added margin for spacing */
+}
+
+.weather-location {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 50px;
+    /* Adjusted font size */
+    font-weight: 400;
+}
+
+/* Data container styling */
+.data-container {
+
+    display: flex;
+    margin-top: 30px;
+    /* Reduced margin for better alignment */
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    /* Added gap between elements */
+}
+
+/* Element styling */
+.element {
+    display: flex;
+    flex-direction: column;
+    /* Stack icon and text vertically */
+    align-items: center;
+    /* Center items horizontally */
+    gap: 10px;
+    /* Added gap for spacing */
+}
+
+.element img {
+    width: 50px;
+    /* Set width for icons */
+    height: 50px;
+    /* Set height for icons */
+    object-fit: contain;
+    /* Maintain aspect ratio */
+}
+.first{
+    float: left;
+    margin-left: 0;
+
+}
+
+/* Data text styling */
+.data {
+    font-size: 28px;
+    /* Adjusted font size */
+    font-weight: 400;
+    text-align: center;
+    /* Center text */
+}
+
+/* Text styling */
+.text {
+    font-size: 18px;
+    /* Adjusted font size */
+    font-weight: 400;
+}
