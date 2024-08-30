@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react';
 import './weatherapp.css';
-import cloud from "../assests/cloud.png";
+// import cloud from "../assests/cloud.png";
 import crear from "../assests/clear.png";
 import mist from "../assests/mist.png";
 import rain from "../assests/rain.png";
@@ -8,12 +8,17 @@ import snow from "../assests/snow.png";
 import search_icon from "../assests/search.png"
 import wind_icon from "../assests/wind.png"
 import humidity_icon from "../assests/humidity.png"
+import fewcloud from "../assests/fewcloud.png"
+import brokencloud from "../assests/brokencloud.png"
+import scattredcloud from "../assests/scattredcloud.png"
+import showerrain from "../assests/showerrain.png"
+import thunderstorm from "../assests/thunderstorm.png"
 
 
 const WeatherApp = () => {
 
     let api_key = "a42e88ab846e79af309f4b3b03ba1446";
-    const [wicon, setWicon] = useState(cloud)
+    const [wicon, setWicon] = useState(fewcloud)
     const search = async () => {
         const element = document.getElementsByClassName("cityInput");
         if (element[0].value === "") {
@@ -35,28 +40,38 @@ const WeatherApp = () => {
 
         else if (data.weather[0].icon === "02d" || data.weather[0].icon === "02n") {
 
-            setWicon(cloud)
+            setWicon(fewcloud)
         }
 
         else if (data.weather[0].icon === "03d" || data.weather[0].icon === "03n") {
 
-            setWicon(mist)
+            setWicon(scattredcloud)
         }
 
         else if (data.weather[0].icon === "04d" || data.weather[0].icon === "04n") {
 
-            setWicon(mist)
+            setWicon(brokencloud)
         }
 
         else if (data.weather[0].icon === "09d" || data.weather[0].icon === "09n") {
 
-            setWicon(rain)
+            setWicon(showerrain)
         }
 
 
         else if (data.weather[0].icon === "10d" || data.weather[0].icon === "10n") {
 
             setWicon(rain)
+        }
+
+        else if (data.weather[0].icon === "11d" || data.weather[0].icon === "11n") {
+
+            setWicon(thunderstorm)
+        }
+
+        else if (data.weather[0].icon === "50d" || data.weather[0].icon === "50n") {
+
+            setWicon(mist)
         }
 
         else if (data.weather[0].icon === "13d" || data.weather[0].icon === "13n") {
@@ -79,11 +94,12 @@ const WeatherApp = () => {
 
         humidity[0].innerHTML = data.main.humidity + " %";
 
-        // Wind[0].innerHTML = Math.floor(data.Wind.speed) + " Km/h";
+        Wind[0].innerHTML = Math.floor(data.wind.speed) + "Km/h";
 
-        temperature[0].innerHTML = Math.floor(data.main.temp) + " °C";
+        temperature[0].innerHTML = Math.floor(data.main.temp) + "°C";
 
-        location[0].innerHTML = data.main.name;
+        location[0].innerHTML = data.name;
+        
     }
     return (
         <div className='container'>
@@ -98,7 +114,7 @@ const WeatherApp = () => {
                 <img src={wicon} alt="" />
             </div>
             <div className="weather-temp">24°C</div>
-            <div className="weather-location">london</div>
+            <div className="weather-location">London</div>
             <div className="data-container">
                 <div className="element first">
                     <img src={humidity_icon} className='icon' />

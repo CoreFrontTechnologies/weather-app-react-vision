@@ -1,7 +1,9 @@
-body{
+body {
     background-color: linear-gradient(to right, #240b36, #c31432);
     background: #240b36;
-    
+    height: 100vh;
+    background-color: #c31432;
+
 }
 
 
@@ -9,14 +11,16 @@ body{
 /* Container styling */
 .container {
     width: 505px;
-    height: 650px;
+    height: 700px;
     margin: auto;
     margin-top: 75px;
     border-radius: 24px;
     background-color: #c31432;
     padding: 20px;
+    padding-bottom: 0;
     /* Padding to ensure content is not touching edges */
     box-sizing: border-box;
+    background: #240b36;
 }
 
 /* Top bar styling */
@@ -30,6 +34,7 @@ body{
 
 /* Input styling */
 .top-bar input {
+    text-transform: uppercase;
     width: 362px;
     height: 60px;
     /* Adjusted height */
@@ -58,7 +63,8 @@ body{
     border-radius: 50%;
     cursor: pointer;
 }
-.search-icon:hover{
+
+.search-icon:hover {
     background: #240b36;
 }
 
@@ -78,9 +84,9 @@ body{
 }
 
 .weather-image img {
-    width: 150px;
+    width: 200px;
     /* Set width for weather icon */
-    height: 150px;
+    height: 200px;
     /* Set height for weather icon */
     object-fit: contain;
     /* Ensure the image maintains its aspect ratio */
@@ -129,6 +135,7 @@ body{
     /* Center items horizontally */
     gap: 10px;
     /* Added gap for spacing */
+    margin-bottom: 150px;
 }
 
 .element img {
@@ -139,7 +146,8 @@ body{
     object-fit: contain;
     /* Maintain aspect ratio */
 }
-.first{
+
+.first {
     float: left;
     margin-left: 0;
 
@@ -159,4 +167,13 @@ body{
     font-size: 18px;
     /* Adjusted font size */
     font-weight: 400;
+}
+
+@media (max-width:500px) {
+  .container {
+    width: 250px;
+    height: 350px;
+    margin: auto;
+
+   }
 }
