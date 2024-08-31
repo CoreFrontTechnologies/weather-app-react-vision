@@ -1,8 +1,9 @@
 body {
     background-color: linear-gradient(to right, #240b36, #c31432);
     background: #240b36;
-    height: 100vh;
     background-color: #c31432;
+   
+    
 
 }
 
@@ -10,14 +11,16 @@ body {
 
 /* Container styling */
 .container {
-    width: 505px;
-    height: 700px;
+    max-width: 505px;
+    margin-right: 700px;
     margin: auto;
-    margin-top: 75px;
+    margin-top: 20px;
+    height: 750px;
     border-radius: 24px;
     background-color: #c31432;
     padding: 20px;
-    padding-bottom: 0;
+    /*  */
+    
     /* Padding to ensure content is not touching edges */
     box-sizing: border-box;
     background: #240b36;
@@ -34,7 +37,7 @@ body {
 
 /* Input styling */
 .top-bar input {
-    text-transform: uppercase;
+    text-transform: capitalize;
     width: 362px;
     height: 60px;
     /* Adjusted height */
@@ -123,6 +126,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 200px;
+    margin-top: 70px;
     /* Added gap between elements */
 }
 
@@ -168,12 +172,23 @@ body {
     /* Adjusted font size */
     font-weight: 400;
 }
-/* 
-@media (max-width:500px) {
-  .container {
-    width: 250px;
-    height: 350px;
-    margin: auto;
 
-   }
-} */
+@media (max-width:500px) {
+
+    body {
+        background: #0b070e;
+        height: 0;
+        position: fixed;
+
+
+    }
+
+    .container {
+        border: solid 1px #c31432;
+        height: 740px;
+        margin-bottom: 0;
+        margin: 0;
+        bottom: 0px;
+        top: 800px;
+    }
+}
