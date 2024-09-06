@@ -173,22 +173,20 @@ body {
     font-weight: 400;
 }
 
-@media (max-width:500px) {
+@media (max-width:355px) {
 
     body {
-        background: #0b070e;
-        height: 0;
-        position: fixed;
-
+        background: #0b070e;        
 
     }
+/* Container styling */
+.container {
+    max-width: 365px;
+    height: 800px;
+    margin: 15px;
+}
+.data-container {
+    gap: 100px;
+}
 
-    .container {
-        border: solid 1px #c31432;
-        height: 740px;
-        margin-bottom: 0;
-        margin: 0;
-        bottom: 0px;
-        top: 800px;
-    }
 }
